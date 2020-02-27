@@ -1,0 +1,281 @@
+@font-face {
+    font-family: "Evogria";
+    src: url(fonts/Evogria.otf);
+}
+
+@font-face {
+    font-family: "Evogria Italic";
+    src: url(fonts/EvogriaItalic.otf);
+}
+
+@font-face {
+    font-family: "Gilroy-ExtraBold";
+    src: url(fonts/gilroyExctraBold.otf);
+}
+
+@font-face {
+    font-family: "Gilroy-Light";
+    src: url(fonts/gilroyLight.otf);
+}
+
+@font-face {
+    font-family: "Bebas Neue Regular Regular";
+    src: url(fonts/BebasNeue.ttf);
+}
+
+body {
+    background: url('../img/backgraund.png');
+    width: 100%;
+    height: 100%;
+
+}
+
+.title {
+    color: #fff;
+    font: 48px 'Evogria';
+    text-align: center;
+    margin-top: 168px;
+    margin-bottom: 90px;
+}
+
+.product {
+    color: #ffffff;
+    font: 36px 'Bebas Neue Regular Regular';
+    text-align: center;
+    margin-bottom: 150px;
+
+}
+
+.doska {
+    background: url('../img/doska.png') no-repeat 15px 0;
+    height: 21px;
+    width: calc(100% - 15px);
+    position: absolute;
+    top: 345px;
+
+}
+
+.product__discounts {
+    padding-top: 38px;
+    font: 24px 'Bebas Neue Regular Regular';
+    margin-bottom: 22px;
+}
+
+.product__new_price {
+    font: 60px 'Bebas Neue Regular Regular';
+    margin-bottom: 20px;
+}
+
+.product__origin_price {
+    font: 24px 'Bebas Neue Regular Regular';
+    text-decoration: line-through;
+    vertical-align: top;
+    margin-left: 5px;
+}
+
+.product__background_top {
+    background: linear-gradient(0, rgba(0, 0, 0, 0.1), transparent 90px);
+}
+
+.product__background_bottom {
+    background-color: rgba(0, 0, 0, 0.1);
+    padding-bottom: 40px;
+}
+
+.select {
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.select:after {
+    content: "";
+    display: block;
+    border-style: solid;
+    border-width: 6px 5px 0 5px;
+    border-color: #fff transparent transparent transparent;
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    right: 0.3rem;
+    z-index: 1;
+    margin-top: -3px;
+}
+
+.select select {
+    background: none;
+    color: #ffffff;
+    border: 0;
+    border-bottom: 3px solid #fff;
+    font: 24px 'Bebas Neue Regular Regular';
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    padding: 10px 20px;
+}
+
+.select select:active {
+    border: 0;
+}
+
+.select option {
+    width: 120px;
+    background: black;
+}
+
+.select option:active {
+    width: 120px;
+    background: black;
+}
+
+.product__basked {
+    height: 50px;
+    width: 68px;
+    cursor: pointer;
+    border: 3px solid #fff;
+    border-radius: 24px;
+    margin-left: 25px;
+    transition: background-color 0.5s ease-out, border-color 0.5s ease-out;
+}
+
+.product__basked:hover {
+    background-color: #ff8b24;
+    border-color: #ff8b24;
+}
+
+/* Popup */
+.popup__overlay {
+    display: none;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    background-color: rgba(0, 0, 0, 0.6);
+    animation-name: popup__overlay;
+    animation-duration: 1s;
+}
+
+@keyframes popup__overlay {
+    from {
+        background-color: rgba(0, 0, 0, 0);
+    }
+    to {
+        background-color: rgba(0, 0, 0, 0.6);
+    }
+}
+
+.popup--active {
+    display: block;
+}
+
+.popup__overlay--closing {
+    animation-name: popup__overlay--closing;
+    animation-duration: 1s;
+    animation-delay: 1s;
+}
+
+@keyframes popup__overlay--closing {
+    from {
+        background-color: rgba(0, 0, 0, 0.6);
+    }
+    to {
+        background-color: rgba(0, 0, 0, 0);
+    }
+}
+
+.popup__basked {
+    height: 100%;
+    width: 470px;
+    float: right;
+    background: #fff;
+    animation-name: popup__basked;
+    animation-duration: 2s;
+}
+
+@keyframes popup__basked {
+    0% {
+        margin-right: -470px;
+    }
+    50% {
+        margin-right: -470px;
+    }
+    100% {
+        margin-right: 0;
+    }
+}
+
+.popup__overlay--closing .popup__basked {
+    margin-right: -470px;
+    animation-name: popup__basked--closing;
+    animation-duration: 1s;
+}
+
+@keyframes popup__basked--closing {
+    from {
+        margin-right: 0;
+    }
+    to {
+        margin-right: -470px;
+    }
+}
+
+.popup__basked-body {
+    overflow-y: scroll;
+    height: calc(100% - 225px);
+}
+.popup__basked-body::-webkit-scrollbar {
+    width: 0;
+}
+
+.popup__basked_title {
+    background: #ff943d url('../img/arrow.png') no-repeat 60px center;
+    height: 225px;
+    color: #fff;
+    font: 60px 'Bebas Neue Regular Regular';
+}
+
+.popup__basked_container {
+    width: 350px;
+    margin: 0 auto;
+}
+
+.basked__image_product {
+    margin-right: 24px;
+}
+
+.popup__basked_product_apple {
+    font: 18px 'Gilroy-Light';
+    text-transform: uppercase;
+    padding: 30px 0;
+    line-height: 20px;
+}
+
+.popup__basked_quantity {
+    padding: 10px 0;
+    font: 24px 'Gilroy-Light';
+}
+
+.popup__basked_price {
+    font: 24px 'Gilroy-ExtraBold';
+}
+
+.popup__basked_totalsumm {
+    margin: 38px 0;
+    font: 30px 'Gilroy-Light';
+}
+
+.popup__basked_summ_all {
+    font: 48px 'Gilroy-Light';
+}
+
+.popup__basked_submit {
+    margin: 20px 0;
+    color: #ffffff;
+    background: #faa21b;
+    text-align: center;
+    height: 62px;
+    width: 300px;
+    border-width: 0;
+    border-radius: 5px;
+}
