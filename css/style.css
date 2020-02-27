@@ -24,18 +24,18 @@
 }
 
 body {
-    background: url('../img/backgraund.png');
+    background: url('../img/backgraund.png') no-repeat;
+    background-size: cover;
     width: 100%;
     height: 100%;
-
 }
 
 .title {
     color: #fff;
     font: 48px 'Evogria';
     text-align: center;
-    margin-top: 168px;
-    margin-bottom: 90px;
+    margin-top: 158px;
+    margin-bottom: 70px;
 }
 
 .product {
@@ -43,7 +43,13 @@ body {
     font: 36px 'Bebas Neue Regular Regular';
     text-align: center;
     margin-bottom: 150px;
+}
+.product:first-child{
+    margin-left: 10px;
 
+}
+.product:last-child{
+    margin-right: 10px;
 }
 
 .doska {
@@ -51,19 +57,22 @@ body {
     height: 21px;
     width: calc(100% - 15px);
     position: absolute;
-    top: 345px;
+    top: 330px;
+}
 
+.product__taste{
+    margin-bottom: 8px;
 }
 
 .product__discounts {
-    padding-top: 38px;
+    padding-top: 32px;
     font: 24px 'Bebas Neue Regular Regular';
-    margin-bottom: 22px;
+    margin-bottom: 7px;
 }
 
 .product__new_price {
     font: 60px 'Bebas Neue Regular Regular';
-    margin-bottom: 20px;
+    margin-bottom: 18px;
 }
 
 .product__origin_price {
@@ -79,7 +88,7 @@ body {
 
 .product__background_bottom {
     background-color: rgba(0, 0, 0, 0.1);
-    padding-bottom: 40px;
+    padding-bottom: 27px;
 }
 
 .select {
@@ -135,6 +144,7 @@ body {
     border-radius: 24px;
     margin-left: 25px;
     transition: background-color 0.5s ease-out, border-color 0.5s ease-out;
+    margin-top: 6px;
 }
 
 .product__basked:hover {
@@ -153,7 +163,7 @@ body {
     z-index: 9999;
     background-color: rgba(0, 0, 0, 0.6);
     animation-name: popup__overlay;
-    animation-duration: 1s;
+    animation-duration: 0.3s;
 }
 
 @keyframes popup__overlay {
@@ -171,8 +181,8 @@ body {
 
 .popup__overlay--closing {
     animation-name: popup__overlay--closing;
-    animation-duration: 1s;
-    animation-delay: 1s;
+    animation-duration: 0.3s;
+    animation-delay: 0.3s;
 }
 
 @keyframes popup__overlay--closing {
@@ -208,7 +218,7 @@ body {
 .popup__overlay--closing .popup__basked {
     margin-right: -470px;
     animation-name: popup__basked--closing;
-    animation-duration: 1s;
+    animation-duration: 0.3s;
 }
 
 @keyframes popup__basked--closing {
@@ -233,6 +243,7 @@ body {
     height: 225px;
     color: #fff;
     font: 60px 'Bebas Neue Regular Regular';
+    cursor: pointer;
 }
 
 .popup__basked_container {
@@ -278,4 +289,14 @@ body {
     width: 300px;
     border-width: 0;
     border-radius: 5px;
+    transition: background-color 0.5s ease-out;
+}
+.popup__basked_submit:hover {
+    background: #323232;
+}
+@media (min-width: 1200px){
+    .col-xl-3 {
+        -ms-flex: 0 0 0;
+        flex: 0 0 240px;
+    }
 }

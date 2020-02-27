@@ -2,12 +2,15 @@ window.addEventListener('load', function () {
     var modalOpenButtons = document.querySelectorAll('[data-open-modal]');
 
     if (modalOpenButtons) {
+        var popupOverlay = document.querySelector('.popup__overlay');
+        var bodyOverflow = document.body.style.overflow;
+
         modalOpenButtons.forEach(function (modalOpenButton) {
             modalOpenButton.addEventListener('click', function (e) {
-                document.querySelector('.popup__overlay').classList.add('popup--active');
+                popupOverlay.classList.add('popup--active');
                 document.querySelector('[data-modal-id="' + this.dataset.openModal + '"]').classList.add('popup--active');
 
-                document.body.style.overflow = 'hidden';
+                bodyOverflow = 'hidden';
 
                 e.preventDefault();
             })
@@ -15,21 +18,21 @@ window.addEventListener('load', function () {
 
         function closePopup(e) {
             if (e.target === e.currentTarget) {
-                document.querySelector('.popup__overlay').classList.add('popup__overlay--closing');
+                popupOverlay.classList.add('popup__overlay--closing');
 
                 setTimeout(function () {
-                    document.querySelector('.popup__overlay').classList.remove('popup--active');
-                    document.querySelector('.popup--active').classList.remove('popup--active');
-                    document.querySelector('.popup__overlay').classList.remove('popup__overlay--closing');
+                    popupOverlay.classList.remove('popup--active');
+                    popupOverlay.classList.remove('popup--active');
+                    popupOverlay.classList.remove('popup__overlay--closing');
 
-                    document.body.style.overflow = 'auto';
-                }, 2000);
+                    bodyOverflow = 'auto';
+                }, 600);
 
                 e.preventDefault();
             }
         }
 
-        document.querySelector('.popup__overlay').addEventListener('click', closePopup);
+        popupOverlay.addEventListener('click', closePopup);
 
         document.querySelector('.popup__basked_title').addEventListener('click', closePopup);
     }
