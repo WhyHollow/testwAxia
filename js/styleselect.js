@@ -258,7 +258,7 @@
 			// Important: we can't use ':hover' as the keyboard and default value can also set the highlight
 			styleSelectOption.addEventListener('mouseover', function(ev){
 				styleSelectOption.parentNode.childNodes.forEach(function(sibling, index){
-					if ( sibling === ev.target ) {
+					if ( sibling === ev.target || ( ev.target && ev.target.parentNode && ev.target.parentNode === sibling) ) {
 						sibling.classList.add('highlighted');
 						highlightedOptionIndex = index;
 					} else {

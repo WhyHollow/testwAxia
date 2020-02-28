@@ -61,22 +61,22 @@ body {
     height: 21px;
     width: calc(100% - 15px);
     position: absolute;
-    top: 330px;
+    top: 340px;
 }
 
 .product__taste{
-    margin-bottom: 8px;
+    margin-bottom: 17px;
 }
 
 .product__discounts {
     padding-top: 32px;
     font: 24px 'Bebas Neue Regular Regular';
-    margin-bottom: 7px;
+    margin-bottom: 17px;
 }
 
 .product__new_price {
     font: 60px 'Bebas Neue Regular Regular';
-    margin-bottom: 18px;
+    margin-bottom: 20px;
     line-height: 54px;
 }
 
@@ -93,7 +93,7 @@ body {
 
 .product__background_bottom {
     background-color: rgba(0, 0, 0, 0.1);
-    padding-bottom: 27px;
+    padding-bottom: 41px;
 }
 
 .select {
@@ -310,11 +310,13 @@ select[data-ss-uuid] {
 .style-select {
     display: block;
     position: relative;
-    margin-top: 10px!important;
+    margin-top: 11px!important;
+    margin-left: 10px!important;
     width: 61px;
     border-bottom: 3px solid #ffffff;
     padding: 3px ;
     font: 24px 'Bebas Neue Regular Regular';
+
 
 }
 .style-select:focus {
@@ -364,22 +366,39 @@ select[data-ss-uuid] {
     height: 187px;
     overflow-y: scroll;
     -ms-overflow-style: none;
+    background-color: rgba(0, 0, 0, 0.1);
 }
 
-.style-select .ss-dropdown::-webkit-scrollbar {
-    display: none;
+.ss-dropdown::-webkit-scrollbar {
+    width: 3px;
 }
+
+.ss-dropdown::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.ss-dropdown::-webkit-scrollbar-thumb {
+    background:  rgba(0, 0, 0, 0.3);
+}
+
+
+
 
 .style-select .ss-dropdown .ss-option {
     width: 100%;
     padding: 25px 14px;
-    background-color: rgba(0, 0, 0, 0.1);
     color: #fff;
-    padding-bottom: 0px;
+    padding-bottom: 0;
+
+}
+.style-select .ss-dropdown .ss-option:last-child {
+
+    padding-bottom: 14px;
 
 }
 .ss-option span{
     padding: 25px 14px;
+
 }
 
 .ss-option.highlighted span {
@@ -395,7 +414,7 @@ select[data-ss-uuid] {
 
 .style-select.open .ss-dropdown {
     display: block;
-    width: 120px;
+    width: 117px;
 }
 
 

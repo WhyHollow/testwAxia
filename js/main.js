@@ -15,4 +15,7 @@ define(['styleselect'], function (styleSelect) {
     }
 
     styleSelect('.custom-select');
+    styleSelect('.custom-select-2');
+    styleSelect('.custom-select-3');
+    styleSelect('.custom-select-4');
 });
