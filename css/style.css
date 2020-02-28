@@ -2,6 +2,10 @@
     font-family: "Evogria";
     src: url(fonts/Evogria.otf);
 }
+@font-face {
+    font-family: 'Evogria';
+    src: url(fonts/evogria.ttf);
+}
 
 @font-face {
     font-family: "Evogria Italic";
@@ -9,20 +13,40 @@
 }
 
 @font-face {
+    font-family: 'Evogria Italic';
+    src: url(fonts/evogriaItalic.ttf);
+}
+
+@font-face {
     font-family: "Gilroy-ExtraBold";
     src: url(fonts/gilroyExctraBold.otf);
+}
+@font-face {
+    font-family: "Gilroy-ExtraBold";
+    src: url(fonts/gilroyExctraBold.ttf);
 }
 
 @font-face {
     font-family: "Gilroy-Light";
     src: url(fonts/gilroyLight.otf);
 }
+@font-face {
+    font-family: "Gilroy-Light";
+    src: url(fonts/gilroyLight.ttf);
+}
 
 @font-face {
     font-family: "Bebas Neue Regular Regular";
     src: url(fonts/BebasNeue.ttf);
 }
+@font-face {
+    font-family: "Bebas Neue Regular Regular";
+    src: url(fonts/BebasNeueRegular.otf);
+}
 
+
+
+/* Main */
 body {
     background: url('../img/backgraund.png') no-repeat;
     background-size: cover;
